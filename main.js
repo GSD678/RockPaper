@@ -11,50 +11,86 @@ function playRound(player1, computer1)
     if (player == "rock")
     {
         if (computer == "paper") {
-            return "You Lose! Paper beats Rock";
+            console.log("You Lose! Paper beats Rock");
+            return "c";
         }
         else if (computer == "rock")
         {
-            return "its a tie!";
+            console.log("its a tie!");
+            return "t";
         }
         else if (computer == "scissor")
         {
-            return "You win! Rock beats Scissors";
+            console.log("You win! Rock beats Scissors");
+            return "p";
         }
         
     }
     if (player == "paper")
     {
         if (computer == "paper") {
-            return "its a tie!";
+            console.log("its a tie!");
+            return "t";
         }
         else if (computer == "rock")
         {
-            return "You win! Paper beats Rock";
+            console.log("You win! Paper beats Rock");
+            return "p";
         }
         else if (computer == "scissor")
         {
-            return "You lose! Rock beats Scissors";
+            console.log("You lose! Rock beats Scissors");
+            return "c";
         }
         
     }
     if (player == "scissor")
     {
         if (computer == "paper") {
-            return "You Win! Scissor beats Paper";
+            console.log("You Win! Scissor beats Paper");
+            return "p";
         }
         else if (computer == "rock")
         {
-            return "You lose! Rock beats Scissors";
+            console.log("You lose! Rock beats Scissors");
+            return "c";
         }
         else if (computer == "scissor")
         {
-            return "its a tie!";
+            console.log("its a tie!");
+            return "t";
         }
         
     }
 }
 
-let temp = computerPlay();
-console.log(temp);
-console.log(playRound("pApEr",temp));
+function game()
+{
+    let player = 0;
+    let computer = 0;
+    let round;
+
+    for (let i = 0; i < 5; i++)
+    {
+        round = playRound(prompt(), computerPlay());
+        if (round == "p")
+        {
+            player += 1;
+        }
+        else if (round == "c")
+        {
+            computer += 1;
+        }
+    }
+
+    if (player >= 3)
+    {
+        console.log("Player Wins!");
+    }
+    else
+    {
+        console.log("Computer Wins!");
+    }
+}
+
+game()
