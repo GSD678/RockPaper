@@ -1,7 +1,4 @@
-.gameBTN {
-  display: none;
-}
-
-p {
-  color: pink;
+.gameBTN,
+#stopBTN {
+  visibility: hidden;
 }
