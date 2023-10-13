@@ -1,4 +1,6 @@
 
+//test commmit
+
 //group all game buttons into one element.
 let btn = document.getElementsByClassName("gameBTN")
 let playerScore = 0;
